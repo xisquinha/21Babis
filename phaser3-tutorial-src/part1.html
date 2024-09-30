@@ -121,6 +121,15 @@
         this.physics.add.collider(stars, platforms);
         // para ver se o player toca ou não numa estrela
         this.physics.add.overlap(player, stars, collectStar, null, this);
+
+
+
+        // ------------------------------ SCORE ----------------------------------------
+        var score = 0;
+        var scoreText;
+
+        // coord, texto, tam letra, cor
+        scoreText = this.add.text(16, 16, 'score: ' + score, { fontSize: '32px', fill: '#000' });
     }
 
     function update ()
@@ -147,10 +156,14 @@
         }
     }
 
-    
+    // função que corre quando o player se sobrepõe a uma estrela
     function collectStar (player, star)
     {
         star.disableBody(true, true);
+
+        // quando o player apanha uma estrela, ganah mais 10 pontos
+        score += 10;
+        scoreText.setText('score: ' + score);
     }
 
 </script>
