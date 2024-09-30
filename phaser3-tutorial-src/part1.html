@@ -50,7 +50,6 @@
     {
         // por default as imagens são posicionadas pelo seu centro
         this.add.image(400, 300, 'sky');
-        this.add.image(400, 300, 'star');
 
         // o grupo de objetos estáticos "plataforma" foi criado
         platforms = this.physics.add.staticGroup();
@@ -60,6 +59,20 @@
         platforms.create(600, 400, 'ground');
         platforms.create(50, 250, 'ground');
         platforms.create(750, 220, 'ground');
+
+
+        // por default é um grupo dinamic
+        starts = this.physics.add.group({
+            key: 'star', // dizemos que vai ser a imagem 'star'
+            repeat: 11, // repetimos a criação de estrelas 11x, logo irá ter 12 estrelas
+            setXY: {x:12, y:0, stepX: 70} // definimos a posição das 12 estrelas
+            // o stepX: 70 significa que as estrelas irão estar distanciadas 70 pixels no eixo xx,
+            // a primeira vai ter coordenadas (12, 0), a segunda (82, 0), a terceira (152, 0), etc
+        });
+        
+        stars.children.iterate(function (child) {
+            child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8)); 
+        });
 
         // para ler as setas do teclado
         cursors = this.input.keyboard.createCursorKeys();
@@ -96,6 +109,7 @@
         });
 
         // -------------------------------------------------------------------------
+        
 
         // para haver um collider entre o player e todas as plataformas
         this.physics.add.collider(player, platforms);
