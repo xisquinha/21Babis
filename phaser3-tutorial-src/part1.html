@@ -194,11 +194,12 @@
         }
     }
 
+    // se uma bomba tocar no player
     function hitBomb(player, bomb){
-       
-        this.physics.pause();
-        player.setTint(0xff0000);
-        player.anims.play('turn');
+
+        this.physics.pause(); // o jogo pausa
+        player.setTint(0xff0000); // o player fica vermelho
+        player.anims.play('turn'); // o player fica virado para a frente
         gameOver = true;
     }    
 
