@@ -51,6 +51,7 @@
         // por default as imagens são posicionadas pelo seu centro
         this.add.image(400, 300, 'sky');
 
+        // PLATFORMS
         // o grupo de objetos estáticos "plataforma" foi criado
         platforms = this.physics.add.staticGroup();
 
@@ -61,6 +62,7 @@
         platforms.create(750, 220, 'ground');
 
 
+        // STARS
         // por default é um grupo dinamic
         starts = this.physics.add.group({
             key: 'star', // dizemos que vai ser a imagem 'star'
@@ -69,11 +71,17 @@
             // o stepX: 70 significa que as estrelas irão estar distanciadas 70 pixels no eixo xx,
             // a primeira vai ter coordenadas (12, 0), a segunda (82, 0), a terceira (152, 0), etc
         });
-        
+
+        // passamos por todas as estrelas e atribuimos um valor de bounce entre 0.4 e 0.8
         stars.children.iterate(function (child) {
             child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8)); 
         });
 
+        this.physics.add.collider(stars, platforms);
+        // para ver se o player toca ou não numa estrela
+        this.physics.add.overlap(player, stars, collectStar, null, this);
+
+        
         // para ler as setas do teclado
         cursors = this.input.keyboard.createCursorKeys();
         
