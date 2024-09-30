@@ -33,6 +33,8 @@
     };
 
     var game = new Phaser.Game(config);
+    var score = 0;
+    var scoreText;
 
     // função da Scene
     function preload ()
@@ -124,10 +126,7 @@
 
 
 
-        // ------------------------------ SCORE ----------------------------------------
-        var score = 0;
-        var scoreText;
-
+        // ------------------------------ SCORE --------------------------------------
         // coord, texto, tam letra, cor
         scoreText = this.add.text(16, 16, 'score: ' + score, { fontSize: '32px', fill: '#000' });
     }
