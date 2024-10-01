@@ -64,7 +64,7 @@
         platforms.create(50, 250, 'ground');
         platforms.create(750, 220, 'ground');
 
-        let leftBoundary = platforms.create(-16, 300, 'ground').setScale(0.04, 50).refreshBody();
+        let leftBoundary = platforms.create(-16, 300, 'ground').setScale(0.08, 25).refreshBody();
         
         // para ler as setas do teclado
         cursors = this.input.keyboard.createCursorKeys();
@@ -142,7 +142,7 @@
         scoreText.setScrollFactor(0); // para o score se mexer com a câmera
 
         // ----------------------------- CAMERA ----------------------------------------
-        //this.cameras.main.setBounds(0, 0, bg.diplayWidth, bg.displayHeight); // os limites da camera
+        this.cameras.main.setBounds(0, 0, bg.diplayWidth, bg.displayHeight); // os limites da camera
         this.cameras.main.startFollow(player); // para a camera seguir o player
     }
 
