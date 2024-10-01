@@ -64,6 +64,8 @@
         platforms.create(50, 250, 'ground');
         platforms.create(750, 220, 'ground');
 
+        platforms.create(-16, 300, 'ground').setScale(1, 2).setRotation(PI).refreshBody();
+
         
         // para ler as setas do teclado
         cursors = this.input.keyboard.createCursorKeys();
@@ -75,7 +77,6 @@
 
         player.setBounce(0.2);
         //player.setCollideWorldBounds(true);
-        player.setBounds(0, 0, bg.diplayWidth, bg.displayHeight);
 
         // animação de correr para a esquerda
         this.anims.create({
@@ -99,8 +100,6 @@
             frameRate: 10,
             repeat: -1
         });
-
-        // -------------------------------------------------------------------------
         
 
         // para haver um collider entre o player e todas as plataformas
