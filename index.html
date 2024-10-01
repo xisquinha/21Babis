@@ -64,8 +64,8 @@
         platforms.create(50, 250, 'ground');
         platforms.create(750, 220, 'ground');
 
-        let leftBoundary = platforms.create(-16, 300, 'ground').setScale(2, 1);
-        leftBoundary.body.setSize(leftBoundary.displayHeight, leftBoundary.displayWidth);
+        let leftBoundary = platforms.create(-16, 300, 'ground');
+        leftBoundary.body.setSize(32, 600);
         leftBoundary.setRotation(Math.PI / 2);
         leftBoundary.refreshBody();
 
