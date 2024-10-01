@@ -74,7 +74,8 @@
         player = this.physics.add.sprite(100, 450, 'dude');
 
         player.setBounce(0.2);
-        player.setCollideWorldBounds(true);
+        //player.setCollideWorldBounds(true);
+        player.setBounds(0, 0, bg.diplayWidth, bg.displayHeight);
 
         // animação de correr para a esquerda
         this.anims.create({
@@ -140,7 +141,7 @@
         // coord, texto, tam letra, cor
         scoreText = this.add.text(16, 16, 'score: ' + score, { fontSize: '32px', fill: '#000' });
 
-        scoreText.setScrollFactor(0);
+        scoreText.setScrollFactor(0); // para o score se mexer com a câmera
 
         // ----------------------------- CAMERA ----------------------------------------
         this.cameras.main.setBounds(0, 0, bg.diplayWidth, bg.displayHeight); // os limites da camera
