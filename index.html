@@ -52,7 +52,7 @@
     {
         // por default as imagens são posicionadas pelo seu centro
         var bg = this.add.image(400, 300, 'sky');
-        bg.setScale(2, 1);
+        bg.setScale(2, 1); // aumentar 2x no xx
 
         // PLATFORMS
         // o grupo de objetos estáticos "plataforma" foi criado
@@ -68,7 +68,7 @@
         // para ler as setas do teclado
         cursors = this.input.keyboard.createCursorKeys();
         
-        // ------------------------------- PLAYER STUFF -------------------------------------
+        // ------------------------------- PLAYER -------------------------------------
 
         // como fizemos this.physics.add significa que é por default um dynamic body
         player = this.physics.add.sprite(100, 450, 'dude');
@@ -139,6 +139,8 @@
         // ------------------------------ SCORE --------------------------------------
         // coord, texto, tam letra, cor
         scoreText = this.add.text(16, 16, 'score: ' + score, { fontSize: '32px', fill: '#000' });
+
+        SetScrollFactor(scoreText, 0);
 
         // ----------------------------- CAMERA ----------------------------------------
         this.cameras.main.setBounds(0, 0, bg.diplayWidth, bg.displayHeight); // os limites da camera
