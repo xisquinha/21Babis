@@ -139,6 +139,10 @@
         // ------------------------------ SCORE --------------------------------------
         // coord, texto, tam letra, cor
         scoreText = this.add.text(16, 16, 'score: ' + score, { fontSize: '32px', fill: '#000' });
+
+        // ----------------------------- CAMERA ----------------------------------------
+        this.camera.main.setBounds(0, 0, bg.diplayWidth, bg.displayHeight);
+        this.camera.main.startFollow(this.player);
     }
 
     function update ()
