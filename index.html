@@ -51,14 +51,14 @@
     function create ()
     {
         // por default as imagens são posicionadas pelo seu centro
-        this.add.image(400, 300, 'sky');
+        this.add.image(400, 300, 'sky').setScale(2, 2).refreshBody();;
 
         // PLATFORMS
         // o grupo de objetos estáticos "plataforma" foi criado
         platforms = this.physics.add.staticGroup();
 
         // como já temos o grupo "plataformas" podemos começar a criar os objetos plataforma
-        platforms.create(400, 568, 'ground').setScale(2, 2).refreshBody(); // como demos scale num static body temos de fazer .refreshBody()
+        platforms.create(400, 568, 'ground').setScale(2).refreshBody(); // como demos scale num static body temos de fazer .refreshBody()
         platforms.create(600, 400, 'ground');
         platforms.create(50, 250, 'ground');
         platforms.create(750, 220, 'ground');
