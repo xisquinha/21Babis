@@ -64,8 +64,10 @@
         platforms.create(50, 250, 'ground');
         platforms.create(750, 220, 'ground');
 
-        let verticalPlat = platforms.create(20, 300, 'ground').setScale(2, 1).setRotation(Math.PI/2).refreshBody();
-        verticalPlat.setSize(verticalPlat.displayWidth, verticalPlat.displayHeight);
+        let leftBoundary = platforms.create(-16, 300, 'ground').setScale(2, 1);
+        leftBoundary.body.setSize(leftBoundary.displayHeight, leftBoundary.displayWidth);
+        leftBoundary.setRotation(Math.PI / 2);
+        rotatedPlatform.refreshBody();
 
         
         // para ler as setas do teclado
