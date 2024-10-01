@@ -140,7 +140,7 @@
         // coord, texto, tam letra, cor
         scoreText = this.add.text(16, 16, 'score: ' + score, { fontSize: '32px', fill: '#000' });
 
-        SetScrollFactor(scoreText, 0);
+        scoreText.setScrollFactor(0);
 
         // ----------------------------- CAMERA ----------------------------------------
         this.cameras.main.setBounds(0, 0, bg.diplayWidth, bg.displayHeight); // os limites da camera
