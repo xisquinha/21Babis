@@ -64,10 +64,7 @@
         platforms.create(50, 250, 'ground');
         platforms.create(750, 220, 'ground');
 
-        let leftBoundary = platforms.create(-16, 300, 'ground');
-        leftBoundary.body.setSize(32, 600);
-        leftBoundary.refreshBody();
-
+        let leftBoundary = platforms.create(-16, 300, 'ground').setScale(0.04, 50).refreshBody();
         
         // para ler as setas do teclado
         cursors = this.input.keyboard.createCursorKeys();
