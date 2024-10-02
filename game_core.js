@@ -58,6 +58,9 @@ function create ()
     platforms.create(750, 220, 'ground');*/
 
     platforms.create(48, 552, 'tiles', 'plataforma_gorda');
+    platforms.create(648, 552, 'tiles', 'plataforma_gorda');
+    platforms.create(744, 552, 'tiles', 'plataforma_gorda');
+    platforms.create(840, 552, 'tiles', 'plataforma_gorda');
 
     // teste
     //platforms.create(100, 100, 'someTiles', 'chave_prata');
