@@ -46,12 +46,15 @@
         this.load.image('bomb', 'images/bomb.png');
         // a personagem é um sprite porque contém frames de animação, a sprite da personagem tem 9 imagens 
         this.load.spritesheet('dude', 'images/dude.png', { frameWidth: 32, frameHeight: 48 });
+
+        this.load.spritesheet('someTiles', 'imagens/platform_tiles.png','atlas.json');
     }
 
     function create ()
     {
         // por default as imagens são posicionadas pelo seu centro
         var bg = this.add.image(0, 0, 'sky').setOrigin(0, 0);
+
 
         // PLATFORMS
         // o grupo de objetos estáticos "plataforma" foi criado
@@ -62,6 +65,9 @@
         platforms.create(600, 400, 'ground');
         platforms.create(50, 250, 'ground');
         platforms.create(750, 220, 'ground');
+
+        // teste
+        platforms.create(100, 100, 'someTiles', 'chave_prata');
 
         let leftBoundary = platforms.create(-16, 300, 'ground').setScale(0.08, 25).refreshBody();
         
