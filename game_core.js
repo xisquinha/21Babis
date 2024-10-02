@@ -38,7 +38,7 @@ function preload ()
     // a personagem é um sprite porque contém frames de animação, a sprite da personagem tem 9 imagens 
     this.load.spritesheet('dude', 'images/dude.png', { frameWidth: 32, frameHeight: 48 });
 
-    this.load.atlas('someTiles', 'images/platform_tiles.png','atlas.json');
+    this.load.atlas('tiles', 'images/platform_tiles.png','atlas.json');
 }
 
 function create ()
@@ -52,13 +52,15 @@ function create ()
     platforms = this.physics.add.staticGroup();
 
     // como já temos o grupo "plataformas" podemos começar a criar os objetos plataforma
-    platforms.create(400, 568, 'ground').setScale(2).refreshBody(); // como demos scale num static body temos de fazer .refreshBody()
+    /*platforms.create(400, 568, 'ground').setScale(2).refreshBody(); // como demos scale num static body temos de fazer .refreshBody()
     platforms.create(600, 400, 'ground');
     platforms.create(50, 250, 'ground');
-    platforms.create(750, 220, 'ground');
+    platforms.create(750, 220, 'ground');*/
+
+    platforms.create(48, 552, 'tiles', 'plataforma_gorda');
 
     // teste
-    platforms.create(100, 100, 'someTiles', 'chave_prata');
+    //platforms.create(100, 100, 'someTiles', 'chave_prata');
 
     let leftBoundary = platforms.create(-16, 300, 'ground').setScale(0.08, 25).refreshBody();
     
