@@ -1,0 +1,11 @@
+body{
+  display: grid;
+  height: 50vh;
+  justify-items: center;
+}
+
+#game{
+  align-self: center;
+  height:50px;
+  width: 800px;
+}
