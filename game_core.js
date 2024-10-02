@@ -105,7 +105,7 @@ function create ()
 
     // --------------------------- STARS ----------------------------------------
     // por default é um grupo dinamic
-    stars = this.physics.add.group({
+    /*stars = this.physics.add.group({
         key: 'star', // dizemos que vai ser a imagem 'star'
         repeat: 11, // repetimos a criação de estrelas 11x, logo irá ter 12 estrelas
         setXY: {x:12, y:0, stepX: 70} // definimos a posição das 12 estrelas
@@ -120,7 +120,7 @@ function create ()
 
     this.physics.add.collider(stars, platforms);
     // para ver se o player toca ou não numa estrela
-    this.physics.add.overlap(player, stars, collectStar, null, this);
+    this.physics.add.overlap(player, stars, collectStar, null, this);*/
 
 
     
