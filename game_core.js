@@ -58,10 +58,10 @@ function create ()
     platforms.create(750, 220, 'ground');*/
 
     platforms.create(48, 552, 'tiles', 'plataforma_inicio');
-    //platforms.create(70, 552, 'tiles', 'plataforma_miolo');
-    //platforms.create(94, 552, 'tiles', 'plataforma_miolo');
-    //platforms.create(118, 552, 'tiles', 'plataforma_miolo');
-    //platforms.create(142, 552, 'tiles', 'plataforma_fim');
+    platforms.create(43, 552, 'tiles', 'plataforma_miolo');
+    platforms.create(107, 552, 'tiles', 'plataforma_miolo');
+    platforms.create(171, 552, 'tiles', 'plataforma_miolo');
+    platforms.create(235, 552, 'tiles', 'plataforma_fim');
   
 
     // teste
