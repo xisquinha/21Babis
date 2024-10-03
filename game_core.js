@@ -26,6 +26,7 @@ var config = {
 var game = new Phaser.Game(config);
 var score = 0;
 var scoreText;
+var doubleJump = 0;
 
 // função da Scene
 function preload ()
@@ -168,8 +169,21 @@ function update ()
         player.anims.play('turn');
     }
     
-    if (cursors.up.isDown && player.body.touching.down){
-        player.setVelocityY(-330);
+    if (cursors.up.isDown){
+
+        doubleJump =+ 1;
+        
+        if(doubleJump == 1 || doubleJump == 2){
+            if(player.body.touching.down){
+                player.setVelocityY(-330);
+            }
+
+            doubleJump = 0;
+        }
+    }
+
+    if(player.body.touching.down){
+        doubleJump = 0;
     }
 }
 
