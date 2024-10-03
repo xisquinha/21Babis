@@ -168,17 +168,21 @@ function update ()
         player.setVelocityX(0);
         player.anims.play('turn');
     }
-    
+
+  // se clicarmos na seta de saltar
     if (cursors.up.isDown){
+      // e ainda não tivermos saltado, saltamos
         if(doubleJump == 0){
             doubleJump += 1;
             player.setVelocityY(-330);
+        // se já tivermos saltado uma vez damos double jump 
         }else if(doubleJump == 1){
             doubleJump += 1;
             player.setVelocityY(-660);
         }
     }
 
+    // se já tivermos no chão pomos a variável do double jump a zero
     if(player.body.touching.down && doubleJump != 0 ){
         doubleJump = 0;
     }
