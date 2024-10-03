@@ -177,8 +177,9 @@ function update ()
             if(player.body.touching.down){
                 player.setVelocityY(-330);
             }
-
-            doubleJump = 0;
+            if(doubleJump == 2){
+                doubleJump = 0;
+            }
         }
     }
 
