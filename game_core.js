@@ -170,16 +170,12 @@ function update ()
     }
     
     if (cursors.up.isDown){
-
-        doubleJump += 1;
-        
-        if(doubleJump == 1 || doubleJump == 2){
-            if(player.body.touching.down){
-                player.setVelocityY(-330);
-            }
-            if(doubleJump == 2){
-                doubleJump = 0;
-            }
+        if(doubleJump == 0){
+            doubleJump += 1;
+            player.setVelocityY(-330);
+        }else if(doubleJump == 1){
+            doubleJump += 1;
+            player.setVelocityY(-660);
         }
     }
 
