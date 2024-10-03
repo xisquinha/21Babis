@@ -57,10 +57,12 @@ function create ()
     platforms.create(50, 250, 'ground');
     platforms.create(750, 220, 'ground');*/
 
-    platforms.create(48, 552, 'tiles', 'plataforma_gorda');
-    platforms.create(138, 552, 'tiles', 'plataforma_gorda');
-    platforms.create(228, 552, 'tiles', 'plataforma_gorda');
-    platforms.create(318, 552, 'tiles', 'plataforma_gorda'); // 336
+    platforms.create(48, 552, 'tiles', 'plataforma_inicio');
+    platforms.create(70, 552, 'tiles', 'plataforma_miolo');
+    platforms.create(94, 552, 'tiles', 'plataforma_miolo');
+    platforms.create(118, 552, 'tiles', 'plataforma_miolo');
+    platforms.create(142, 552, 'tiles', 'plataforma_fim');
+  
 
     // teste
     //platforms.create(100, 100, 'someTiles', 'chave_prata');
