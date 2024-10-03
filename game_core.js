@@ -186,7 +186,7 @@ function update ()
         // se já tivermos saltado uma vez damos double jump 
         }else if(doubleJump == 1 && click){
             doubleJump += 1;
-            let vel = player.getVelocityY();
+            let vel = player.body.velocity.y;
             player.setVelocityY(vel-290);
             click = false;
         }
