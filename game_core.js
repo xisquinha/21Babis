@@ -187,7 +187,7 @@ function update ()
         }else if(doubleJump == 1 && click){
             doubleJump += 1;
             let vel = player.body.velocity.y;
-            player.setVelocityY(vel-290);
+            player.setVelocityY(-vel-290);
             click = false;
         }
     }
