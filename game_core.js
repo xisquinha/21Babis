@@ -27,6 +27,7 @@ var game = new Phaser.Game(config);
 var score = 0;
 var scoreText;
 var doubleJump = 0;
+var click = false;
 
 // função da Scene
 function preload ()
@@ -169,16 +170,24 @@ function update ()
         player.anims.play('turn');
     }
 
-  // se clicarmos na seta de saltar
+    if(cursor.up.isUp && doubleJump == 1){
+        click = true;
+    }
+  
+    // se clicarmos na seta de saltar
     if (cursors.up.isDown){
-      // e ainda não tivermos saltado, saltamos
+      
+        // e ainda não tivermos saltado, saltamos
         if(doubleJump == 0){
             doubleJump += 1;
+            click = false;
             player.setVelocityY(-330);
+          
         // se já tivermos saltado uma vez damos double jump 
-        }else if(doubleJump == 1){
+        }else if(doubleJump == 1 && click){
             doubleJump += 1;
             player.setVelocityY(-660);
+            click = false;
         }
     }
 
