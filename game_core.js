@@ -171,7 +171,7 @@ function update ()
     
     if (cursors.up.isDown){
 
-        doubleJump =+ 1;
+        doubleJump += 1;
         
         if(doubleJump == 1 || doubleJump == 2){
             if(player.body.touching.down){
