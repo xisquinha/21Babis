@@ -195,6 +195,7 @@ function update ()
     // se já tivermos no chão pomos a variável do double jump a zero
     if(player.body.touching.down && doubleJump != 0 ){
         doubleJump = 0;
+        click = false;
     }
 }
 
