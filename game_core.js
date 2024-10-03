@@ -170,7 +170,7 @@ function update ()
         player.anims.play('turn');
     }
 
-    if(cursor.up.isUp && doubleJump == 1){
+    if(cursors.up.isUp && doubleJump == 1){
         click = true;
     }
   
