@@ -75,7 +75,7 @@ function create ()
     // como fizemos this.physics.add significa que é por default um dynamic body
     player = this.physics.add.sprite(100, 450, 'dude');
 
-    player.setBounce(0.2);
+    player.setBounce(0.15);
     //player.setCollideWorldBounds(true);
 
     // animação de correr para a esquerda
