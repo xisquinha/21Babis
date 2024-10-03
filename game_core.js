@@ -183,7 +183,7 @@ function update ()
         }
     }
 
-    if(player.body.touching.down){
+    if(player.body.touching.down && doubleJump != 0 ){
         doubleJump = 0;
     }
 }
